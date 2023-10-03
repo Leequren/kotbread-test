@@ -1,0 +1,43 @@
+{
+  "name": "kotbread-test",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://gitlab.kotbread.ru/kotbread-test.git",
+  "license": "MIT",
+  "author": "KotBread",
+  "engines": {
+    "node": ">=17.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:shared": "nx watch --projects=@kotbread-test/shared -- nx run \\$NX_PROJECT_NAME:build",
+    "dev:frontend": "nx dev @kotbread-test/frontend",
+    "prod:frontend": "nx prod @kotbread-test/frontend",
+    "dev:backend": "cross-env NODE_ENV=development nx dev @kotbread-test/backend",
+    "build": "yarn clean && nx run-many --target=build",
+    "lint": "nx run-many --output-style=stream --target=lint",
+    "format": "nx run-many --output-style=stream --target=format",
+    "prepare": "husky install",
+    "clean": "nx run-many --target=clean",
+    "dev": "concurrently --kill-others -n shared,client,server \"yarn dev:shared\" \"yarn dev:frontend\" \"yarn dev:backend\"",
+    "clean:dev": "yarn build && yarn dev"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "concurrently": "^8.2.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.3",
+    "nodemon": "^3.0.1",
+    "nx": "^16.8.1",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
+}

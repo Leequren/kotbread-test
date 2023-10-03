@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "composite": true,
+    "incremental": true,
+    "paths": {
+      "apiMethods/*": ["./src/apiMethods/*"],
+      "apiSchema/*": ["./src/apiSchema/*"],
+      "utils/*": ["./src/utils/*"]
+    }
+  }
+}

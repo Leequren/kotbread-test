@@ -1,0 +1,39 @@
+{
+  "name": "@kotbread-test/backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --config nodemon.json",
+    "pm:update": "pm2 install typescript && pm2 kill -a && pm2 save --force",
+    "pm:dev": "cross-env NODE_ENV=development pm2 start ecosystem.config.cjs --env development",
+    "pm:prod": "cross-env NODE_ENV=development pm2 start ecosystem.config.cjs --env production",
+    "build": "yarn clean && tsc && tsc-alias",
+    "clean": "rimraf dist",
+    "lint": "yarn eslint --ext .ts,tsx ./src",
+    "format": "yarn eslint --ext .ts,tsx --fix ./src"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^5.7.1",
+    "@fastify/cors": "^8.3.0",
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/static": "^6.11.1",
+    "@kotbread-test/shared": "*",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.23.1",
+    "mongoose": "^7.5.1",
+    "pino": "^8.15.1",
+    "pino-pretty": "^10.2.0",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "ts-paths-esm-loader": "^1.4.3",
+    "tsc-alias": "^1.8.7",
+    "tsconfig-paths": "^4.2.0"
+  }
+}

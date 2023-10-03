@@ -1,0 +1,40 @@
+{
+  "name": "@kotbread-test/frontend",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env VITE_NODE_ENV=development vite",
+    "prod": "cross-env VITE_NODE_ENV=production vite",
+    "build": "cross-env VITE_NODE_ENV=production vite build",
+    "preview": "vite preview",
+    "lint": "yarn eslint --ext .ts,tsx ./src",
+    "format": "yarn eslint --ext .ts,tsx --fix ./src"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.9",
+    "vite-plugin-svgr": "^3.2.0",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@vkontakte/vk-bridge": "^2.11.2",
+    "@vkontakte/vkui": "^5.8.1",
+    "axios": "^1.5.0",
+    "axios-retry": "^3.7.0",
+    "dayjs": "^1.11.9",
+    "markdown-to-jsx": "^7.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.15.0",
+    "@kotbread-test/shared": "*"
+  }
+}

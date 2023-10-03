@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "outDir": "dist",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "paths": {
+      "models/*": ["./src/models/*"],
+      "controllers/*": ["./src/controllers/*"],
+      "middlewares/*": ["./src/middlewares/*"],
+      "routes/*": ["./src/routes/*"],
+      "config/*": ["./src/config/*"],
+      "utils/*": ["./src/utils/*"],
+      "instances/*": ["./src/instances/*"],
+    }
+  },
+  "references": [{ "path": "../shared" }]
+}

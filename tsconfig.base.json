@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strict": true,
+    "allowJs": false,
+    "incremental": false,
+    "noEmit": false,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "useUnknownInCatchVariables": true,
+    "noUnusedParameters": true,
+    "useDefineForClassFields": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowUnreachableCode": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictBindCallApply": false,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@kotbread-test/shared": ["packages/shared/src"],
+      "@kotbread-test/backend": ["packages/backend/src"],
+      "@kotbread-test/frontend": ["packages/frontend/src"]
+    }
+  }
+}

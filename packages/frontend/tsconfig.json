@@ -1,0 +1,37 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "types": ["vite/client"],
+    "noEmit": true,
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "assets/*": ["./src/assets/*"],
+      "pages/*": ["./src/pages/*"],
+      "pages": ["./src/pages/index.ts"],
+      "store/*": ["./src/store/*"],
+      "store": ["./src/store/index.ts"],
+      "utils/*": ["./src/utils/*"]
+    },
+    "plugins": [
+      {
+        "name": "@styled/typescript-styled-plugin",
+        "lint": {
+          "validProperties": ["leading-trim", "text-edge"]
+        }
+      }
+    ]
+  },
+  "include": ["vite.config.ts", "./src"],
+  "references": [
+    {
+      "path": "../shared"
+    },
+  ]
+}

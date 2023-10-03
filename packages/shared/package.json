@@ -1,0 +1,15 @@
+{
+  "name": "@kotbread-test/shared",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -b && tsc-alias",
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "lint": "yarn eslint --ext .ts,tsx ./src",
+    "format": "yarn eslint --ext .ts,tsx --fix ./src"
+  }
+}
