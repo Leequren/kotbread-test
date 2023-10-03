@@ -7,9 +7,6 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --config nodemon.json",
-    "pm:update": "pm2 install typescript && pm2 kill -a && pm2 save --force",
-    "pm:dev": "cross-env NODE_ENV=development pm2 start ecosystem.config.cjs --env development",
-    "pm:prod": "cross-env NODE_ENV=development pm2 start ecosystem.config.cjs --env production",
     "build": "yarn clean && tsc && tsc-alias",
     "clean": "rimraf dist",
     "lint": "yarn eslint --ext .ts,tsx ./src",

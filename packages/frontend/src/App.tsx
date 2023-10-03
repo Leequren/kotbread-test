@@ -1,9 +1,9 @@
 import { FC, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { AppRoot } from '@vkontakte/vkui'
+import { makeRequest } from 'utils/api'
 
 import { routes } from './config/routes'
-import { makeRequest } from 'utils/api'
 
 const App: FC = () => {
   // [ПРИМЕР] базового запроса с фронтенда
