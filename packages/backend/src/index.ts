@@ -15,6 +15,12 @@ export type FastifyAppOptions = {
   gracefulShutdown: GracefulShutdown
 }
 
+declare module 'fastify' {
+  export interface FastifyRequest {
+    user: { id: string }
+  }
+}
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 

@@ -1,5 +1,7 @@
 import { AuthenticationError } from 'config/errors'
 import { FastifyReply, FastifyRequest, HookHandlerDoneFunction } from 'fastify'
+import { getUserId } from 'utils/getUserIdFromAuth'
+import { logger } from 'utils/logger'
 
 export const AuthMiddleware = (
   request: FastifyRequest,
@@ -13,10 +15,11 @@ export const AuthMiddleware = (
   }
 
   const authUrl = auth.split(' ').at(1)
-
+  logger.info(authUrl, getUserId(String(authUrl)))
   if (!authUrl) {
     throw new AuthenticationError('Wrong authorization header format')
   }
 
+  request.user = { id: getUserId(String(authUrl)) }
   done()
 }

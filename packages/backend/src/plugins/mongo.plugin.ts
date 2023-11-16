@@ -12,6 +12,7 @@ export default async function MongoPlugin(
   mongoose.set('strictQuery', true)
 
   try {
+    logger.info(MONGO_URI)
     await mongoose.connect(MONGO_URI, { serverSelectionTimeoutMS: 1_000 })
 
     gracefulShutdown.subscribe(async () => {

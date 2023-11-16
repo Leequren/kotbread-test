@@ -1,0 +1,12 @@
+.cardInfo {
+  border: 3px solid #ddd1b2;
+  color: #efd491;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
